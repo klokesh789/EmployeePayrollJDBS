@@ -2,6 +2,7 @@ package com.bridgelabz.employeepayrolljdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -113,7 +114,7 @@ public class EmployeePayrollDBService {
 		
 		try {
 			Connection connection = this.getConnection();
-			String sqlStatement = "SELECT * FROM employee,payroll WHERE employee.payroll_id = payroll.payroll.id AND name = ?;";
+			String sqlStatement = "SELECT * FROM employee,payroll WHERE employee.payroll_id = payroll.payroll_id AND name = ?;";
 			employeePayrollDataStatement = connection.prepareStatement(sqlStatement);
 		}
 		catch(SQLException e) {
