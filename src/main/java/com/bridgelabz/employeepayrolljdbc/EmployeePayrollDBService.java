@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeePayrollDBService {
-private Connection getConnection() throws SQLException {
+	private Connection getConnection() throws SQLException {
 		
 		String jdbcURL = "jdbc:mysql://localhost:3306/employee_payroll?useSSL=false";
 		String userName = "root";
@@ -42,6 +42,7 @@ private Connection getConnection() throws SQLException {
 		}
 		catch(SQLException e){
 			e.printStackTrace();
+			
 		}
 		return employeePayrollList;
 	}
