@@ -2,7 +2,6 @@ package com.bridgelabz.employeepayrolljdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -42,6 +41,7 @@ private Connection getConnection() throws SQLException {
 			}
 		}
 		catch(SQLException e){
+			
 			e.printStackTrace();
 		}
 		return employeePayrollList;
